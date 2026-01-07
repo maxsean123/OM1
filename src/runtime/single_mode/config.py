@@ -88,8 +88,8 @@ class RuntimeConfig:
     action_execution_mode: Optional[str] = None
     action_dependencies: Optional[Dict[str, List[str]]] = None
 
-    @classmethod
-    def load(cls, config_name: str) -> "RuntimeConfig":
+    @staticmethod
+    def load(config_name: str) -> "RuntimeConfig":
         """Load a runtime configuration from a file."""
         return load_config(config_name)
 
